@@ -28,7 +28,8 @@ class XOR_Net:
 
     def __init__(self):
         """
-        Initialize the network. Weights and biases are initialized randomly using Gaussian distribution (mean=0, variance=1)
+        Initialize the network. Weights are initialized randomly using Gaussian distribution (mean=0, variance=1).
+        All biases as initialized as zero.
         """
         # Build a list containing the number of neurons in each layer
         self.layers = [self.NUM_INPUT_NEURONS, self.NUM_HIDDEN_NEURONS, self.NUM_OUTPUT_NEURONS]
