@@ -39,17 +39,12 @@ class XOR_Net:
         self.biases = [np.zeros((y, 1)) for y in self.layers[1:]]
         self.weights = [np.random.randn(y, x) for x, y in zip(self.layers[:-1], self.layers[1:])]
     
-    def __str__(self):
-        network = ""
-        layers = str(self.layers)
-        network = "Layers: " + layers
-        return network
-    
     def display_Parameters(self):
         """
+        Show the current values for the weights and biases in the network, layer by layer.
         """
         for layer in range(len(self.weights)):
-            print(f"Layer {layer}:")
+            print(f"Layer {layer}")
             print("Weights:")
             print(self.weights)
             print("\nBiases:")
